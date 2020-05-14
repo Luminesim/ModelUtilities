@@ -1,0 +1,7 @@
+locationId,attribute,value
+CensusRegion-RoundValleyNo410,SupportsFarms,TRUE
+CensusRegion-Unity,SupportsUrbanDetachedUnits,TRUE
+Unity-LutherPlace,IsAssistedLiving,TRUE
+Unity-UCHS,IsHighSchool,TRUE
+Unity-UCHS,IsSchool,TRUE
+Unity-UCHS,IsSchool,TRUE

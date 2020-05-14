@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+group 'com.luminesim'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compileOnly 'org.projectlombok:lombok:1.18.10'
+    annotationProcessor 'org.projectlombok:lombok:1.18.10'
+    implementation("com.google.guava:guava:28.2-jre")
+    compile group: 'de.undercouch', name: 'citeproc-java', version: '2.0.0'
+    compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.30'
+}

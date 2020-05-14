@@ -1,0 +1,5 @@
+﻿locationId,groupType,minEmployees,maxEmployees,minAttendees,maxAttendees,number,label,citation
+CensusRegion-Unity,Workplace,0,0,0,0,500,Non-Employer Business,Placeholder
+CensusRegion-Unity,Workplace,1,10,0,0,100,Small Business,Placeholder
+Unity-LutherPlace,AssistedLiving,5,5,49,49,1,,Placeholder
+Unity-UCHS,SecondarySchool,20,20,100,200,1,High School,Placeholder

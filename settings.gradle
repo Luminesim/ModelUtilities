@@ -1,0 +1,5 @@
+rootProject.name = 'luminesim'
+include 'utilities'
+include 'health'
+include 'regions'
+
