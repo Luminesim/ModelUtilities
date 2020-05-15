@@ -149,8 +149,15 @@ public class RegionDatasetReader {
                     .filter(data::hasPopulation)
                     .collect(Collectors.toSet());
             for (Location B : childrenWithPopulations) {
+                log.debug("Remaining: {}", remaining);
+                log.debug("Removing: {}: {}", B.getName(), data.getPopulation(B));
                 if (!remaining.entirelyContains(data.getPopulation(B))) {
-                    throw new IllegalStateException(String.format("Location %s has too small population to support all of %s", A, childrenWithPopulations));
+
+                    throw new IllegalStateException(String.format(
+                            "Location %s has too few people to support the nested populations in %s. " +
+                                    "It encountered a problem with population %s",
+                            A, childrenWithPopulations, B)
+                    );
                 }
                 remaining = remaining.excluding(data.getPopulation(B));
             }

@@ -316,4 +316,13 @@ public class Population<SegmentType> implements HasAttributes {
             return random() * (endAgeExclusive - startAgeInclusive) + startAgeInclusive;
         }
     }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Population(");
+        forEachSegment(s -> sb.append(String.format("%s, %s-%s: %s; ", s.segment, s.startAgeInclusive, s.endAgeExclusive, s.count)));
+        sb.append(")");
+        return sb.toString();
+    }
 }
