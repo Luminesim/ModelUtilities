@@ -19,3 +19,10 @@ dependencies {
     compile group: 'de.undercouch', name: 'citeproc-java', version: '2.0.0'
     compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.30'
 }
+
+subprojects {
+    apply plugin: 'java'
+    tasks.withType(Jar) {
+        destinationDir = file("$rootDir/build/libs")
+    }
+}

@@ -1,0 +1,1442 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+*************************************************
+	         AnyLogic Project File 
+*************************************************	         
+-->
+<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.5.2.202001241823" AlpVersion="8.5.1">
+<Model>
+	<Id>1590595818016</Id>
+	<Name><![CDATA[ModelUtilities]]></Name>
+	<EngineVersion>6</EngineVersion>
+	<JavaPackageName><![CDATA[com.luminesim.anylogic]]></JavaPackageName>
+	<ModelTimeUnit><![CDATA[Second]]></ModelTimeUnit>
+	<ActiveObjectClasses>
+		<!--   =========   Active Object Class   ========  -->
+		<ActiveObjectClass>
+			<Id>1590595818022</Id>
+			<Name><![CDATA[Main]]></Name>
+			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
+			<Generic>false</Generic>
+			<GenericParameter>
+				<Id>1590595818020</Id>
+				<Name><![CDATA[1590595818020]]></Name>
+				<GenericParameterValue Class="CodeValue">
+					<Code><![CDATA[T extends Agent]]></Code>
+				</GenericParameterValue>
+				<GenericParameterLabel><![CDATA[Generic parameter:]]></GenericParameterLabel>
+			</GenericParameter>
+			<FlowChartsUsage>ENTITY</FlowChartsUsage>
+			<SamplesToKeep>100</SamplesToKeep>
+			<LimitNumberOfArrayElements>false</LimitNumberOfArrayElements>
+			<ElementsLimitValue>100</ElementsLimitValue>
+			<MakeDefaultViewArea>true</MakeDefaultViewArea>
+			<SceneGridColor/>
+			<SceneBackgroundColor/>
+			<SceneSkybox>null</SceneSkybox>
+			<AgentProperties>
+	 			<SpaceType>CONTINUOUS</SpaceType>			
+				<EnvironmentDefinesInitialLocation>true</EnvironmentDefinesInitialLocation>
+				<RotateAnimationTowardsMovement>true</RotateAnimationTowardsMovement>
+				<RotateAnimationVertically>false</RotateAnimationVertically>
+				<VelocityCode Class="CodeUnitValue">
+					<Code><![CDATA[10]]></Code>
+					<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
+				</VelocityCode>
+				<PhysicalLength Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalLength>
+				<PhysicalWidth Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalWidth>
+				<PhysicalHeight Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+				</PhysicalHeight>
+			</AgentProperties>
+			<EnvironmentProperties>
+					<EnableSteps>false</EnableSteps>
+					<StepDurationCode Class="CodeUnitValue">
+						<Code><![CDATA[1.0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</StepDurationCode>
+					<SpaceType>CONTINUOUS</SpaceType>
+					<WidthCode><![CDATA[500]]></WidthCode>
+					<HeightCode><![CDATA[500]]></HeightCode>
+					<ZHeightCode><![CDATA[0]]></ZHeightCode>
+					<ColumnsCountCode><![CDATA[100]]></ColumnsCountCode>
+					<RowsCountCode><![CDATA[100]]></RowsCountCode>
+					<NeigborhoodType>MOORE</NeigborhoodType>
+					<LayoutType>USER_DEF</LayoutType>
+					<LayoutTypeApplyOnStartup>true</LayoutTypeApplyOnStartup>
+					<NetworkType>USER_DEF</NetworkType>
+					<NetworkTypeApplyOnStartup>true</NetworkTypeApplyOnStartup>
+					<ConnectionsPerAgentCode><![CDATA[2]]></ConnectionsPerAgentCode>
+					<ConnectionsRangeCode><![CDATA[50]]></ConnectionsRangeCode>
+					<NeighborLinkFractionCode><![CDATA[0.95]]></NeighborLinkFractionCode>
+					<MCode><![CDATA[10]]></MCode>
+			</EnvironmentProperties>
+			<DatasetsCreationProperties>
+				<AutoCreate>true</AutoCreate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1590652800000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+					</RecurrenceCode>
+			</DatasetsCreationProperties>
+			<ScaleRuler>
+				<Id>1590595818018</Id>
+				<Name><![CDATA[scale]]></Name>
+				<X>0</X><Y>-150</Y>
+				<PublicFlag>false</PublicFlag>
+				<PresentationFlag>false</PresentationFlag>
+				<ShowLabel>false</ShowLabel>
+				<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+				<Length>100</Length>
+				<Rotation>0</Rotation>
+				<ScaleType>BASED_ON_LENGTH</ScaleType>
+				<ModelLength>10</ModelLength>
+				<LengthUnits>METER</LengthUnits>
+				<Scale>10</Scale>
+				<InheritedFromParentAgentType>true</InheritedFromParentAgentType>
+			</ScaleRuler>
+			<CurrentLevel>1590595818021</CurrentLevel>
+			<ConnectionsId>1590595818017</ConnectionsId>
+			<AgentLinks>
+				<AgentLink>
+					<Id>1590595818017</Id>
+					<Name><![CDATA[connections]]></Name>
+					<X>50</X><Y>-50</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<HandleReceiveInConnections>false</HandleReceiveInConnections>
+					<AgentLinkType>COLLECTION_OF_LINKS</AgentLinkType>
+					<AgentLinkBidirectional>true</AgentLinkBidirectional>
+					<MessageType><![CDATA[Object]]></MessageType>
+					<LineStyle>SOLID</LineStyle>
+					<LineWidth>1</LineWidth>
+					<LineColor>-16777216</LineColor>
+					<LineZOrder>UNDER_AGENTS</LineZOrder>
+					<LineArrow>NONE</LineArrow>
+					<LineArrowPosition>END</LineArrowPosition>
+				</AgentLink>
+			</AgentLinks>
+
+
+			<Presentation>
+				<Level>
+					<Id>1590595818021</Id>
+					<Name><![CDATA[level]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<LevelVisibility>DIM_NON_CURRENT</LevelVisibility>
+
+
+				</Level>
+			</Presentation>
+
+		</ActiveObjectClass>
+	</ActiveObjectClasses>	
+	<DifferentialEquationsMethod>EULER</DifferentialEquationsMethod>
+	<MixedEquationsMethod>RK45_NEWTON</MixedEquationsMethod>
+	<AlgebraicEquationsMethod>MODIFIED_NEWTON</AlgebraicEquationsMethod>
+	<AbsoluteAccuracy>1.0E-5</AbsoluteAccuracy>
+	<FixedTimeStep>0.001</FixedTimeStep>
+	<RelativeAccuracy>1.0E-5</RelativeAccuracy>
+	<TimeAccuracy>1.0E-5</TimeAccuracy>
+	<Frame>
+		<Width>1000</Width>
+		<Height>600</Height>
+	</Frame>
+	<Database>
+		<Logging>false</Logging>
+		<AutoExport>false</AutoExport>
+		<ShutdownCompact>false</ShutdownCompact>
+		<ImportSettings>
+		</ImportSettings>
+		<ExportSettings>
+		</ExportSettings>
+	</Database>
+	
+	<RunConfiguration ActiveObjectClassId="1590595818022">
+		<Id>1590595818025</Id>
+		<Name><![CDATA[RunConfiguration]]></Name>
+		<MaximumMemory>512</MaximumMemory>
+		<ModelTimeProperties>
+			<StopOption><![CDATA[Stop at specified time]]></StopOption>
+			<InitialDate><![CDATA[1590537600000]]></InitialDate>	
+			<InitialTime><![CDATA[0.0]]></InitialTime>	
+			<FinalDate><![CDATA[1593216000000]]></FinalDate>	
+			<FinalTime><![CDATA[100.0]]></FinalTime>	
+		</ModelTimeProperties>
+		<AnimationProperties>
+			<StopNever>true</StopNever>
+			<ExecutionMode>realTimeScaled</ExecutionMode>
+			<RealTimeScale>1.0</RealTimeScale>
+			<EnableZoomAndPanning>true</EnableZoomAndPanning>
+			<EnableDeveloperPanel>false</EnableDeveloperPanel>
+			<ShowDeveloperPanelOnStart>false</ShowDeveloperPanelOnStart>
+		</AnimationProperties>
+		<Inputs>		
+		</Inputs>
+		<Outputs>
+		</Outputs>
+	</RunConfiguration>
+	<Experiments>	
+		<!--   =========   Simulation Experiment   ========  -->
+		<SimulationExperiment ActiveObjectClassId="1590595818022">
+			<Id>1590595818024</Id>
+			<Name><![CDATA[Simulation]]></Name>
+			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
+			<CommandLineArguments><![CDATA[]]></CommandLineArguments>
+			<MaximumMemory>512</MaximumMemory>
+			<RandomNumberGenerationType>fixedSeed</RandomNumberGenerationType>
+			<CustomGeneratorCode>new Random()</CustomGeneratorCode>
+			<SeedValue>1</SeedValue>
+			<SelectionModeForSimultaneousEvents>LIFO</SelectionModeForSimultaneousEvents>
+			<VmArgs><![CDATA[]]></VmArgs>
+			<LoadRootFromSnapshot>false</LoadRootFromSnapshot>
+
+			<Presentation>
+				<Text>
+					<Id>0</Id>
+					<Name><![CDATA[text]]></Name>
+					<X>50</X><Y>30</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-12490271</Color>
+					<Text><![CDATA[ModelUtilities]]></Text>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>24</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
+			</Presentation>
+
+			<Parameters>			
+			</Parameters>			
+			<PresentationProperties>
+				<EnableZoomAndPanning>true</EnableZoomAndPanning>
+				<ExecutionMode><![CDATA[realTimeScaled]]></ExecutionMode>
+				<Title><![CDATA[ModelUtilities : Simulation]]></Title>	
+				<EnableDeveloperPanel>true</EnableDeveloperPanel>
+				<ShowDeveloperPanelOnStart>false</ShowDeveloperPanelOnStart>
+				<RealTimeScale>1.0</RealTimeScale>
+			</PresentationProperties>
+			<ModelTimeProperties>
+				<StopOption><![CDATA[Never]]></StopOption>
+				<InitialDate><![CDATA[1590537600000]]></InitialDate>	
+				<InitialTime><![CDATA[0.0]]></InitialTime>	
+				<FinalDate><![CDATA[1593216000000]]></FinalDate>	
+				<FinalTime><![CDATA[100.0]]></FinalTime>	
+			</ModelTimeProperties>
+		</SimulationExperiment>	
+	</Experiments>
+	<JavaClasses>
+		<!--   =========   Java Class   ========  -->
+		<JavaClass>
+			<Id>1590595974205</Id>
+			<Name><![CDATA[Exoskeleton]]></Name>
+			<Text><![CDATA[import java.util.function.*;
+import java.util.stream.*;
+import static com.luminesim.anylogic.StatisticsUtilities.*;
+import lombok.NonNull;
+
+/**
+ * Provides methods and classes to greatly extend the powers of 
+ * regular AnyLogic classes, collections, and common operations.
+ * 
+ * @note Originally derived from the AMTA project.
+	Copyright 2018 Dylan Knowles and worldwide Anthrodynamics Simulation branches (As of 2018, Canada: Anthrodynamics Simulation Services Ltd.; Australia: Anthrodynamics Simulation Services Australia PTY Ltd.)
+	
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+	
+	    http://www.apache.org/licenses/LICENSE-2.0
+	
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
+ *
+ * @author Dylan Knowles
+ */	
+public class Exoskeleton implements Serializable {
+
+    private Exoskeleton() {}
+    
+    /**
+     * @return
+     * 	An exoskeleton for the collection.
+     */
+    public static <T, U extends Collection<T>> CollectionExoskeleton<T> $(U collection) {
+    	return new CollectionExoskeleton<T>(collection, false);
+    }
+    
+    /**
+     * @return
+     * 	An exoskeleton for the collection.
+     */
+    public static <T extends Agent, U extends AgentList<T>> CollectionExoskeleton<T> $(U agents) {
+    	return new CollectionExoskeleton<T>(filter(agents, x -> true), false);
+    }
+    
+    public static Chart1DExoskeleton $(Chart1D chart) {
+    	return new Chart1DExoskeleton(chart);
+    }  
+    
+    public static PlotExoskeleton $(Chart2DPlot chart) {
+    	return new PlotExoskeleton(chart);
+    }  
+    
+    public static TimeStackChartExoskeleton $(TimeStackChart chart) {
+    	return new TimeStackChartExoskeleton(chart);
+    }
+    
+    public static TimePlotChartExoskeleton $(TimePlot chart) {
+    	return new TimePlotChartExoskeleton(chart);
+    }
+    
+    public static DataSetExoskeleton $(DataSet dataset) {
+    	return new DataSetExoskeleton(dataset);
+    }
+    
+    private static interface Streamable<T> {
+	    public Stream<T> stream();
+	    public default Stream<T> stream(boolean parallelize) {
+	    	if (parallelize)
+	    		return stream().parallel();
+	    	else
+	    		return stream();
+	    }
+	    public default Collection<T> collection() {
+	    	return stream().collect(Collectors.toList());
+	    }
+	    public default int size() {
+	    	return collection().size();
+	    }
+    }
+    
+    private static class StreamableCollection<T> implements Streamable<T> {
+    	
+    	private Collection<T> collection;
+    	public StreamableCollection(Collection<T> collection) {
+    		this.collection = Collections.unmodifiableCollection(collection);
+    	}
+    	public Stream<T> stream() {
+    		return collection.stream();
+    	}
+    	public Collection<T> collection() {
+    		return collection;
+    	}
+    }
+    
+    public static class StreamableStream<T> implements Streamable {
+    	private Stream<T> stream;
+    	public StreamableStream(Stream<T> stream) {
+    		this.stream = stream;
+    	}
+    	public Stream<T> stream() {
+    		return stream;
+    	}
+    }
+
+    /**
+     * Provides easy-access methods for a collection.
+     * The collection should be treated as a stream.
+     * @author dylan
+     *
+     * @param <T>
+     */
+    public static class CollectionExoskeleton<T> {
+    	
+    	private boolean isParallelized;
+    	
+    	private Streamable<T> collection;
+    	
+    	private <U extends Collection<T>> CollectionExoskeleton(U collection, boolean parallelProcessing) {
+    		this.collection = new StreamableCollection<>(collection);
+    		this.isParallelized = parallelProcessing;
+    	}
+    	
+    	private CollectionExoskeleton(Stream<T> stream, boolean parallelProcessing) {
+    		this.collection = new StreamableStream<>(stream);
+    		this.isParallelized = parallelProcessing;
+    	}
+    	
+    	private CollectionExoskeleton(Streamable<T> streamable, boolean parallelProcessing) {
+    		this.collection = streamable;
+    		this.isParallelized = parallelProcessing;
+    	}
+    	
+    	/**
+    	 * @return
+    	 * 	An exoskeleton optimized for parallelization.
+    	 */
+    	public CollectionExoskeleton<T> inParallel() {
+    		return new CollectionExoskeleton(collection, true);
+    	}
+    	
+    	public int size() {
+    		return collection.size();
+    	}
+    	
+    	/**
+    	 * @param predicate
+    	 * @return
+    	 * 	The percentage of items in the collection matching the predicate.
+    	 */
+    	public double percentWhere(Predicate<T> predicate) {
+    		if (isParallelized)
+    			return parallelPercentWhere(collection.collection(), predicate);
+    		else
+    			return StatisticsUtilities.percentWhere(collection.collection(), predicate);
+    	}
+    	
+    	/**
+    	 * @param value
+    	 * @return
+    	 * 	The sum of the items in the collection.
+    	 */
+    	public double sum(ToDoubleFunction<T> value) {
+    		if (isParallelized)
+    			return parallelSum(collection.collection(), value);
+    		else
+    			return collection.stream().mapToDouble(value).sum();
+    	}
+    	
+    	/**
+    	 * @param value
+    	 * @param nanValue
+    	 * 	The value to provide when there are no items to average, or if the average produces NaN.
+    	 * @return
+    	 * 	The average of the items in the collection.
+    	 */
+    	public double average(ToDoubleFunction<T> value, double nanValue) {
+    		if (isParallelized)
+    			return parallelAverage(collection.collection(), value, nanValue);
+    		else
+    			return collection.stream().mapToDouble(value).average().orElse(nanValue);
+    	}    	
+    	
+    	/**
+    	 * @param value
+    	 * @return
+    	 * 	The average of the items in the collection, or NaN if a problem occurs.
+    	 */
+    	public double average(ToDoubleFunction<T> value) {
+    		if (isParallelized)
+    			return parallelAverage(collection.collection(), value, Double.NaN);
+    		else
+    			return collection.stream().mapToDouble(value).average().orElse(Double.NaN);
+    	}
+    	
+    	/**
+    	 * @return
+    	 * 	The number of items matching the criteria.
+    	 */
+    	public long count(Predicate<T> predicate) {
+    		return collection.stream(isParallelized).filter(predicate).count();
+    	}
+    	
+    	/**
+    	 * @return
+    	 * 	True, if the collection contains any elements matching the predicate.
+    	 */
+    	public boolean contains(Predicate<T> predicate) {
+    		return collection.stream(isParallelized).anyMatch(predicate);
+    	}
+    	
+    	/**
+    	 * @return
+    	 * 	A filtered collection.
+    	 * @note
+    	 * 	This requires the regrouping of sub-items, and therefore may incur a bottleneck.
+    	 */
+    	public CollectionExoskeleton<T> filter(Predicate<T> predicate) {
+    		return new CollectionExoskeleton<T>(
+    			collection.stream(isParallelized).filter(predicate),
+    			isParallelized
+    		);
+    	}
+    	
+    	public <U> CollectionExoskeleton<U> map(Function<T, U> mapper) {
+    		return new CollectionExoskeleton<U>(
+    			collection
+    			.stream(isParallelized)
+    			.map(mapper),
+    			isParallelized
+    		);
+    	}
+    	
+    	public <U> CollectionExoskeleton<U> flatMap(Function<T, Stream<U>> mapper) {
+    		return new CollectionExoskeleton<U>(
+    			collection
+    			.stream(isParallelized)
+    			.flatMap(mapper),
+    			isParallelized
+    		);
+    	}
+    	
+    	/**
+    	 * 
+    	 * @param mapper
+    	 * @return
+    	 * 	The items in the collection mapped to a value.
+    	 */
+    	public <U> Collection<U> mapCollect(Function<T, U> mapper) {
+    		return collection
+    			.stream(isParallelized)
+    			.map(mapper)
+    			.collect(Collectors.toList())
+    		;
+    	}
+    	
+    	/**
+    	 * 
+    	 * @param mapper
+    	 * @return
+    	 * 	The items in the collection mapped to a value.
+    	 */
+    	public <U> Collection<U> flatMapCollect(Function<T, Stream<U>> mapper) {
+    		return collection
+    			.stream(isParallelized)
+    			.flatMap(mapper)
+    			.collect(Collectors.toList())
+    		;
+    	}
+    	
+    	public DataSetExoskeleton snapshot(ToDoubleFunction<T> x, ToDoubleFunction<T> y) {
+    		ExtendedDataSet ds = new ExtendedDataSet(limitMin(1, collection.size()));
+    		collection.stream().forEach(thing -> ds.add(x.applyAsDouble(thing), y.applyAsDouble(thing)));
+    		return new DataSetExoskeleton(ds);
+    	}
+    	
+    	public void forEach(Consumer<T> action) {
+    		collection.stream(isParallelized).forEach(action);
+    		
+    	}
+    }
+    
+    public static class Chart1DExoskeleton {
+    	private Chart1D chart;
+    	
+    	public Chart1DExoskeleton(Chart1D chart) {
+    		this.chart = chart;
+    	}
+    	
+    	public Chart1DExoskeleton add(String label, Color color, double value) {
+    		ExperimentUtilities.plot(
+    			label,
+    			color,
+    			value,
+    			chart
+    		);
+    		return this;
+    	}
+    	
+    	/**
+    	 * Adds a data point to the chart, deriving the color from the label.
+    	 * @param label
+    	 * @param value
+    	 * @return
+    	 */
+    	public Chart1DExoskeleton add(@NonNull String label, double value) {
+    		ExperimentUtilities.plot(
+    			label,
+    			ExperimentUtilities.runColor(label),
+    			value,
+    			chart
+    		);
+    		return this;
+    	}
+    }
+    
+    public static class PlotExoskeleton {
+    	private Chart2DPlot chart;
+    	
+    	public PlotExoskeleton(Chart2DPlot chart) {
+    		this.chart = chart;
+    	}
+    	
+    	public PlotExoskeleton add(String label, Color color, DataSet ds) {
+    		ExperimentUtilities.plot(
+    			label,
+    			color,
+    			ds,
+    			chart
+    		);
+    		return this;
+    	}
+    	
+    	public ExtendedDataSet getAverage() {
+    		SortedMap<Double, List<Double>> values = new TreeMap<>();
+    		
+    		for (int i = 0; i < chart.getCount(); i += 1) {
+    			DataSet ds = chart.get(i);
+    			for (int j = 0; j < ds.size(); j += 1) {
+    				double x = ds.getX(j);
+    				double y = ds.getY(j);
+    				values.putIfAbsent(x, new LinkedList<>());
+        			values.get(x).add(y);
+    			}
+    		}
+    		
+    		ExtendedDataSet average = new ExtendedDataSet(values.size());
+    		values.forEach((x,yList) -> {
+        		average.add(x, average(yList, y->y));
+    		});
+    		return average;
+    	}
+
+    	/**
+    	 * @return
+    	 * 	A dataset whos points are the median of all Ys for each X.
+    	 */
+    	public ExtendedDataSet getMedian() {
+    		SortedMap<Double, List<Double>> values = new TreeMap<>();
+    		
+    		for (int i = 0; i < chart.getCount(); i += 1) {
+    			DataSet ds = chart.get(i);
+    			for (int j = 0; j < ds.size(); j += 1) {
+    				double x = ds.getX(j);
+    				double y = ds.getY(j);
+    				values.putIfAbsent(x, new LinkedList<>());
+        			values.get(x).add(y);
+    			}
+    		}
+    		
+    		ExtendedDataSet median = new ExtendedDataSet(values.size());
+    		values.forEach((x,yList) -> {
+        		median.add(x, median(yList));
+    		});
+    		return median;
+    	}
+    }
+    
+    public static class TimeStackChartExoskeleton {
+    	private TimeStackChart chart;
+    	
+    	public TimeStackChartExoskeleton(TimeStackChart chart) {
+    		this.chart = chart;
+    	}
+    	
+    	public TimeStackChartExoskeleton add(String label, Color color, DataSet ds) {
+    		ExperimentUtilities.plot(
+    			label,
+    			color,
+    			ds,
+    			chart
+    		);
+    		return this;
+    	}
+    	
+    	public TimeStackChartExoskeleton add(String label, Color color, Supplier<Double> valueSupplier, Agent anyAgent) {
+    		ExperimentUtilities.plot(
+    			label,
+    			color,
+    			valueSupplier,
+    			chart,
+    			anyAgent
+    		);
+    		return this;
+    	}
+    }
+    
+    public static class TimePlotChartExoskeleton {
+    	private TimePlot chart;
+    	
+    	public TimePlotChartExoskeleton(TimePlot chart) {
+    		this.chart = chart;
+    	}
+    	
+    	public TimePlotChartExoskeleton add(String label, Color color, DataSet ds) {
+    		ExperimentUtilities.plot(
+    			label,
+    			color,
+    			ds,
+    			chart
+    		);
+    		return this;
+    	}
+    	
+    	public TimePlotChartExoskeleton add(String label, Color color, Supplier<Double> valueSupplier, Agent anyAgent) {
+    		ExperimentUtilities.plot(
+    			label,
+    			color,
+    			valueSupplier,
+    			chart,
+    			anyAgent
+    		);
+    		return this;
+    	}
+    }
+    
+    /**
+     * Extends a dataset's capabilities.
+     * @author dylan
+     *
+     */
+    public static class DataSetExoskeleton {
+    	private ExtendedDataSet data;
+    	public DataSetExoskeleton(ExtendedDataSet data) {
+    		this.data = data;
+    	}
+    	
+    	public DataSetExoskeleton(DataSet data) {
+    		this.data = ExtendedDataSet.from(data, 0);
+    	}
+    	
+    	public void plot(String label, Color color, Plot plot) {
+    		ExperimentUtilities.plot(label, color, data, plot);
+    	}
+    	
+    	public ExtendedDataSet data() {
+    		return data;
+    	}
+    }
+}]]></Text>
+		</JavaClass>
+		<!--   =========   Java Class   ========  -->
+		<JavaClass>
+			<Id>1590595974273</Id>
+			<Name><![CDATA[ExtendedDataSet]]></Name>
+			<Text><![CDATA[import java.util.AbstractMap;
+import java.util.function.*;
+import java.util.stream.*;
+import java.util.Map.Entry;
+import lombok.*;
+
+/**
+ * A data set that can be provided with a default value, and that can
+ * have its data manipulated more easily than a standard data set.
+ * 
+ * @note Originally derived from the AMTA project.
+	Copyright 2018 Dylan Knowles and worldwide Anthrodynamics Simulation branches (As of 2018, Canada: Anthrodynamics Simulation Services Ltd.; Australia: Anthrodynamics Simulation Services Australia PTY Ltd.)
+	
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+	
+	    http://www.apache.org/licenses/LICENSE-2.0
+	
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
+ */	
+public class ExtendedDataSet extends DataSet implements Iterable{
+
+	/** 
+	 * The default Y value used when required.
+	 */
+	private Function<ExtendedDataSet, Double> defaultY;
+	
+	/**
+	 * @return
+	 * 	A data set with no data that cannot be modified.
+	 */
+	public static ExtendedDataSet empty() {
+		return new ExtendedDataSet(1, 0d) {
+			@Override
+			public synchronized void add(double x, double y) {
+				
+			}
+			@Override
+			public synchronized void add(double x) {
+				
+			}
+		};
+	}
+    /**
+     * Default constructor
+     */
+    public ExtendedDataSet(int capacity, double defaultY) {
+    	this(capacity, ds -> defaultY);
+    }
+    
+    public ExtendedDataSet(int capacity, Function<ExtendedDataSet, Double> defaultY) {
+    	super(capacity);
+    	this.defaultY = defaultY;
+    }
+    
+    /**
+     * Creates the data set, using the most recent Y value (or zero) as the
+     * default.
+     */
+    public ExtendedDataSet(int capacity) {
+    	this(capacity, ds -> {
+    		
+    		if (ds.size() == 0)
+    			return 0d;
+    		else
+    			return ds.getY(ds.size() - 1);
+    		
+    	});
+    }
+    
+
+    /**
+     * Gets the Y value at the given index.
+     */
+	@Override
+	public synchronized double getY(int i) {
+		if (i >= size())
+			return defaultY.apply(this);
+		
+		return super.getY(i);
+	}
+	
+	/**
+	 * @return
+	 * 	The last Y value added to the dataset.
+	 */
+	public double getYLast() {
+		
+		return getY(size()-1);
+		
+	}
+	
+	/**
+	 * Gets the maximum Y value stored in the data set.
+	 */
+	@Override
+	public double getYMax() {
+		if (size() == 0)
+			return defaultY.apply(this);
+		
+		return super.getYMax();
+	}
+
+	
+	/**
+	 * Gets the minimum Y value stored in the data set.
+	 */
+	@Override
+	public double getYMin() {
+		if (size() == 0)
+			return defaultY.apply(this);
+			
+		return super.getYMin();
+	}
+
+	
+	/**
+	 * Gets the median Y value stored in the data set.
+	 */
+	@Override
+	public double getYMedian() {
+		if (size() == 0)
+			return defaultY.apply(this);
+		return super.getYMedian();
+	}
+
+	
+	/**
+	 * Gets the mean Y value stored in the data set.
+	 */
+	@Override
+	public double getYMean() {
+		if (size() == 0)
+			return defaultY.apply(this);
+			
+		return super.getYMean();
+	}
+
+	@Override
+	public String toString() {
+		return super.toString() + "[DefaultY = " + defaultY+"]";
+	}
+
+	/**
+	 * Allows the data set to be iterated over.
+	 */
+	@Override
+	public Iterator<Entry<Double, Double>> iterator() {
+		
+		return new Iterator<Entry<Double, Double>>() {
+			
+			int index = 0;
+			
+			@Override
+			public boolean hasNext() {
+				if (index < size())
+					return true;
+				else
+					return false;
+			}
+			
+			@Override
+			public Entry<Double, Double> next() {
+				Entry<Double, Double> entry = new AbstractMap.SimpleEntry<Double, Double>(getX(index), getY(index));
+				index += 1;
+				return entry;
+			}
+		};
+	}
+	
+	/**
+	 * @return
+	 * 	A dataset whose x values match this dataset's x values, but the y values have been
+	 *  transformed according to the given mapping function.
+	 */
+	public ExtendedDataSet map(BiFunction<Double, Double, Double> map) {
+		
+		ExtendedDataSet ds = new ExtendedDataSet(this.getCapacity(), defaultY);
+		
+		forEach((x,oldY) -> {
+			Double newY = map.apply(x, oldY);
+			ds.add(x, newY);
+		});
+		
+		return ds;
+	}
+	
+	/**
+	 * @return
+	 * 	The y values in this dataset.
+	 */
+	public List<Double> getYValues() {
+		return stream().map(kvp -> kvp.getValue()).collect(Collectors.toList());
+	}
+	
+	/**
+	 * @return
+	 * 	The X values in this dataset.
+	 */
+	public List<Double> getXValues() {
+		return stream().map(kvp -> kvp.getKey()).collect(Collectors.toList());
+	}
+	
+	/**
+	 * Streams the data set.
+	 */
+	public Stream<Entry<Double, Double>> stream() {
+		return StreamSupport.stream(spliterator(), false);
+	}
+	
+	/**
+	 * Allows the action to be performed on each item of the data set.
+	 */
+	public void forEach(BiConsumer<Double, Double> action) {
+		stream().forEach(kvp -> action.accept(kvp.getKey(), kvp.getValue()));
+	}
+	
+	/**
+	 * @return
+	 * 	Data whose x value is between xStart and xEnd, inclusive.
+	 */
+	public ExtendedDataSet between(double xStart, double xEnd) {
+		ExtendedDataSet subset = new ExtendedDataSet(getCapacity());
+		stream()
+			.filter(xy -> xStart <= xy.getKey() && xy.getKey() <= xEnd)
+			.forEach(xy -> subset.add(xy.getKey(), xy.getValue()))
+		;
+		return subset;
+	}
+	
+	/**
+	 * 
+	 * @return
+	 * 	The data points whose X values are between (time - modelTimeDuration) and (time) (both inclusive).
+	 * @param u
+	 * 	A utilities object for getting the current time.
+	 * @param modelTimeDuration
+	 * 	The time duration, e.g., 3 * year()
+	 */
+	public ExtendedDataSet last(@NonNull Utilities u, double modelTimeDuration) {
+		if (modelTimeDuration <= 0) {
+			throw new RuntimeException("Time duration must be greater than zero");
+		}
+		
+		// Return.
+		return between(u.time() - modelTimeDuration, u.time());
+	}
+	
+	
+	/**
+	 * Constructs an extended data set using the given data set.
+	 * @param ds
+	 * 	The data set.
+	 * @pre ds has at least one item.
+	 */
+	public static ExtendedDataSet from(DataSet ds, double defaultY) {
+		// PReconditions
+		if (ds.size() == 0)
+			throw new IllegalArgumentException("Data set must have at least one element.");
+		
+		// Construct.
+		ExtendedDataSet toReturn = new ExtendedDataSet(ds.getCapacity(), defaultY);
+		for (int i = 0; i < ds.size(); i += 1) {
+			toReturn.add(ds.getX(i), ds.getY(i));
+		}
+		
+		return toReturn;
+	}
+
+}]]></Text>
+		</JavaClass>
+		<!--   =========   Java Class   ========  -->
+		<JavaClass>
+			<Id>1590596297322</Id>
+			<Name><![CDATA[StatisticsUtilities]]></Name>
+			<Text><![CDATA[import java.util.function.*;
+import java.util.stream.*;
+import lombok.*;
+
+/**
+ * Useful functions when trying to get statistics quickly on a group of agents or objects.
+ * 
+ * @note Originally derived from the AMTA project.
+	Copyright 2018 Dylan Knowles and worldwide Anthrodynamics Simulation branches (As of 2018, Canada: Anthrodynamics Simulation Services Ltd.; Australia: Anthrodynamics Simulation Services Australia PTY Ltd.)
+	
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+	
+	    http://www.apache.org/licenses/LICENSE-2.0
+	
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
+ */
+@NoArgsConstructor
+public class StatisticsUtilities implements Serializable {
+    /**
+     * Returns the percentage of the population with the given attribute.
+     */
+    public static <T> double percentWhere(Iterable<T> population, Predicate<T> predicate) {
+        double bottom = count(population, p -> true);
+        double top = count(population, predicate);
+        return zidz(top, bottom) * 100.0;
+    }
+
+    /**
+     * Returns the percentage of the population with the given attribute.
+     */
+    public static <T> double parallelPercentWhere(Iterable<T> population, Predicate<T> predicate) {
+        double bottom = StreamSupport.stream(population.spliterator(), true).count();
+        double top = parallelCount(population, predicate);
+        return zidz(top, bottom) * 100.0;
+    }
+
+    /**
+     * Returns the percentage of the population with the given attribute.
+     */
+    public static <T> double parallelSum(Iterable<T> population, ToDoubleFunction<T> mapping) {
+        return StreamSupport.stream(population.spliterator(), true).mapToDouble(mapping).sum();
+    }
+
+    /**
+     * Returns the percentage of the population with the given attribute.
+     */
+    public static <T> double parallelCount(Iterable<T> population, Predicate<T> predicate) {
+        return parallelStreamWhere(population, predicate).count();
+    }
+
+    /**
+     * Returns the population with the given attribute. The operation is parallelized, which may result in speed improvements for large populations.
+     */
+    public static <T> Set<T> parallelCollect(Iterable<T> population, Predicate<T> predicate) {
+        return parallelStreamWhere(population, predicate).collect(Collectors.toSet());
+    }
+
+    /**
+     * Returns a mapping of the given population with the given attribute. The operation is parallelized, which may result in speed improvements for large populations.<br>       * <br>       *       * @remarks<br> This function originated from the need to extract things like parents of children matching some criteria, people with dementia whose carers earned a certain income, etc.
+     */
+    public static <T, U> Set<U> parallelMapCollect(Iterable<T> population, Predicate<T> predicate, Function<T, U> mapper) {
+        return parallelStreamWhere(population, predicate).map(mapper).collect(Collectors.toSet());
+    }
+
+    /**
+     * Returns a mapping of the given population. The operation is parallelized, which may result in speed improvements for large populations.<br>       * <br>       *       * @remarks<br> This function originated from the need to extract things like parents of children matching some criteria, people with dementia whose carers earned a certain income, etc.
+     */
+    public static <T, U> Set<U> parallelMapCollect(Iterable<T> population, Function<T, U> mapper) {
+        return StreamSupport.stream(population.spliterator(), true).map(mapper).collect(Collectors.toSet());
+    }
+
+    /**
+     * Returns the population with the given attribute as a stream. The operation is parallelized, which may result in speed improvements for large populations.
+     */
+    public static <T> Stream<T> parallelStreamWhere(Iterable<T> population, Predicate<T> predicate) {
+        return StreamSupport.stream(population.spliterator(), true).filter(predicate);
+    }
+
+    /**
+     * Returns an average that is safe for use in charts / SD diagrams, i.e., if the average is NAN a default value is returned.
+     */
+    public static <T> double parallelAverage(Iterable<T> things, ToDoubleFunction<T> value, double nanValue) {
+        Double avg = StreamSupport.stream(things.spliterator(), true).mapToDouble(value).average().orElse(nanValue);
+        if (avg.isNaN()) return nanValue;
+        else return avg;
+    }
+
+    /**
+     * Performs a linear interpolation.<br>       * <br>       *       * @pre fraction in range [0, 1]
+     */
+    public static double interpolate(double start, double finish, double fraction) { 
+    	// Sanity check.          
+    	if (!(0 <= fraction && fraction <= 1))              
+    		throw new RuntimeException("Fraction (" + fraction + ") must be in range [0,1].");            
+    	double gap = finish - start;          
+    	return start + gap * fraction;      
+    }
+    
+    /**
+     * Returns a mapping of the given population. The operation is parallelized, which may result in speed improvements for large populations.<br>       * <br>       *       * @remarks<br> This function originated from the need to extract things like parents of children matching some criteria, people with dementia whose carers earned a certain income, etc.
+     */
+    public static<T, U> List<U> parallelMapCollectToList(Iterable<T> population, Function<T, U> mapper){
+            return StreamSupport.stream(population.spliterator(),true).map(mapper).collect(Collectors.toList());
+    }
+    
+    public static double median(@NonNull List<Double> rawValues) {
+    	if (rawValues == null || rawValues.size() == 0)
+    		return 0;
+
+    	// Sort the list.
+    	List<Double> values = new LinkedList<>(rawValues);
+    	Collections.sort(values);
+
+    	// Find the middle entry to get a median.
+    	// Code graciously adapted from http://stackoverflow.com/questions/4191687/how-to-calculate-mean-median-mode-and-range-from-a-set-of-numbers
+    	int middle = values.size() / 2;
+    	if (values.size() % 2 == 1) {
+    		// If there's truly a median value (i.e., odd sized list), get it.
+    		return values.get(middle);
+    	} else {
+    		// Otherwise, take an average.
+    		return (values.get(middle-1) + values.get(middle)) / 2.0;
+    	}
+    }
+    
+    /**
+     * Returns the median value for the objects in the collection.
+     */
+    public static <T> double median(List<T> things, Function < T, Double > rawValue) {
+		return median(things
+				.stream()
+				.map(thing -> rawValue.apply(thing))
+				.collect(Collectors.toList())
+		);
+	}
+}]]></Text>
+		</JavaClass>
+		<!--   =========   Java Class   ========  -->
+		<JavaClass>
+			<Id>1590596944921</Id>
+			<Name><![CDATA[ExperimentUtilities]]></Name>
+			<Text><![CDATA[
+import java.util.function.*;
+import java.util.stream.*;
+import static com.luminesim.anylogic.StatisticsUtilities.*;
+//import com.google.gson.Gson;
+//import org.apache.commons.math3.primes.Primes;
+
+/**
+ * Provides methods to make experiments easier to build, especially when working with datasets.
+ * 
+ * @note Originally derived from the AMTA project.
+	Copyright 2018 Dylan Knowles and worldwide Anthrodynamics Simulation branches (As of 2018, Canada: Anthrodynamics Simulation Services Ltd.; Australia: Anthrodynamics Simulation Services Australia PTY Ltd.)
+	
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+	
+		http://www.apache.org/licenses/LICENSE-2.0
+	
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
+ *
+ * @author Dylan Knowles
+ */	
+public class ExperimentUtilities implements Serializable {
+	/**
+		* Returns a color that corresponds to the given run name that is distinguishable on a graph from hues assigned to other runs. Intended largely to help make graph colors simpler to choose automatically when multiple runs are used to populate a graph.<br> 			* <br> 			* @param runName<br> 			* 	The name of the run for which a color is needed.
+		*/
+	public static Color runColor(String runName) {	
+		/* Supposedly we can distinguish ~150 unique hues, so 150 / 5 rounded to the
+		 * closest prime number (i.e., to get unique colors while allowing for
+		 * sub-shades if needed for any particular run.) */
+		return spectrumColor(runName.hashCode(), 17);
+	}
+
+	/**
+		* Quickly adds a dataset to a chart.
+		*/
+	public static ChartItem plot(String label, Color color, DataSet dataset, Chart2DPlot plot) {
+		final int StandardChartLineThickness = 2;
+		plot.addDataSet(dataset, label, color, true, Chart.INTERPOLATION_LINEAR, StandardChartLineThickness, Chart.POINT_NONE);
+		return dataset;
+	}
+
+	/**
+		* Returns a copy of the data set.
+		*/
+	public static DataSet copyData(DataSet ds) {
+		DataSet toReturn = new DataSet(ds.size());
+		for (int i = 0; i < ds.size(); i += 1) {
+			toReturn.add(ds.getX(i), ds.getY(i));
+		}
+		return toReturn;
+	}
+
+	/**
+		* Quickly adds a dataset to a chart.
+		*/
+	public static void plot(String label, Color color, double value, Chart1D barChart) {
+		barChart.addDataItem(new DataItem() {{
+			setValue(value);
+		}}, label, color);
+	}
+
+	/**
+		* Quickly adds a dataset to a chart.
+		*/
+	public static ChartItem plot(String label, Color color, DataSet dataset, TimePlot plot) {
+		final int StandardChartLineThickness = 2;
+		plot.addDataSet(dataset, label, color, true, Chart.INTERPOLATION_LINEAR, StandardChartLineThickness, Chart.POINT_NONE);
+		return dataset;
+	}
+
+	/**
+		* Quickly adds a dataset to a chart.
+		*/
+	public static void plot(String label, Color color, Supplier<Double> valueSupplier, Chart1D barChart) {
+		barChart.addDataItem(new DataItem() {
+			public void update() {
+				setValue(valueSupplier.get());
+			}
+		}, label, color);
+	}
+
+	/**
+		* Averages all data sets in the chart at each time point, returning a data set containing those averages. Averages are calculated at individual time points: if the data sets record data at uneven intervals, the resulting dataset may have artifacts. It is recommended that all datasets passed to this function have unified time steps.<br> 			* <br> 			* E.g., if data set A = { 0=10, 1=20, 2=30 } and B = { 0=10, 1 = 40, 10 = 0 }, then the average is { 0=10, 1=30, 2=30, 10=0 }.
+		*/
+	public static DataSet average(Plot chart) {	
+		List<DataSet> data = new LinkedList<>();
+		for (int i = 0; i < chart.getCount(); i += 1) {
+			data.add(chart.get(i));
+		}
+		return average(data);
+	}
+
+	/**
+		* Averages all data sets in the chart at each time point, returning a data set containing those averages. Averages are calculated at individual time points: if the data sets record data at uneven intervals, the resulting dataset may have artifacts. It is recommended that all datasets passed to this function have unified time steps.<br> 			* <br> 			* E.g., if data set A = { 0=10, 1=20, 2=30 } and B = { 0=10, 1 = 40, 10 = 0 }, then the average is { 0=10, 1=30, 2=30, 10=0 }.
+		*/
+	public static DataSet average(List<DataSet> data) {	
+		// Get the average at all time points. 	
+		// Step 1: Get each run's value at each time point. 	
+		Map<Double, List<Double>> itemsByMeasurementTime = new LinkedHashMap<>();
+		for (int i = 0; i < data.size(); i += 1) {
+			DataSet next = data.get(i);
+			for (int j = 0; j < next.size(); j += 1) {
+				double time = next.getX(j);
+				double value = next.getY(j);
+				if (itemsByMeasurementTime.containsKey(time) == false)
+					itemsByMeasurementTime.put(time, new LinkedList<>());
+				itemsByMeasurementTime.get(time).add(value);
+			}
+		}	
+		
+		// Step 2: Create a single, unified dataset. 	
+		DataSet average = new DataSet(limitMin(100, itemsByMeasurementTime.size())); 	
+		itemsByMeasurementTime.forEach((time, valueList) -> { 		
+			average.add(
+					time,
+					valueList.stream().mapToDouble(v -> v).average().getAsDouble()
+					); 
+			});
+		// Step 3: Return!
+		return average;
+	}			
+	
+	/**
+		* Averages all data sets in the chart at each time point, returning a data set containing those averages. Averages are calculated at individual time points: if the data sets record data at uneven intervals, the resulting dataset may have artifacts. It is recommended that all datasets passed to this function have unified time steps.
+		* E.g., if data set A = { 0=10, 1=20, 2=30 } and B = { 0=10, 1 = 40, 10 = 0 }, then the average is { 0=10, 1=30, 2=30, 10=0 }.\
+		*/
+	public static DataSet average(TimePlot chart){
+		List<DataSet> data=new LinkedList<>();
+		for(int i=0;i<chart.getCount();i+=1) { 
+			data.add(chart.get(i));
+		}
+		return average(data);
+	}
+	/**
+		* Quickly adds a dataset to a chart.
+		*/
+	public static ChartItem plot(String label,Color color,DataSet dataset,TimeStackChart plot) {
+		plot.addDataSet(dataset,label,color);
+		return dataset;
+	}		
+	
+	/**
+		* Quickly adds a dataset to a chart. * The final agent parameter is required to extract the current time.
+		*/
+	public static ChartItem plot(String label, Color color, Supplier < Double > valueSupplier, TimeStackChart plot, Agent agent) {
+		return plot(label, color, new DataSet(10_000) {
+			public void update() {
+				add(agent.time(), valueSupplier.get());
+			}
+		}, plot);
+	}
+
+	/** * Quickly adds a dataset to a chart. */
+	public static ChartItem plot(String label, Color color, Supplier < Double > valueSupplier, TimePlot plot, Agent agent) {
+		final int StandardChartLineThickness = 2;
+		DataSet ds = new DataSet(10_000) {
+			public void update() {
+				add(agent.time(), valueSupplier.get());
+			}
+		};
+		plot.addDataSet(ds, label, color, true, Chart.INTERPOLATION_LINEAR, StandardChartLineThickness, Chart.POINT_NONE);
+		return ds;
+	}
+}]]></Text>
+		</JavaClass>
+		<!--   =========   Java Class   ========  -->
+		<JavaClass>
+			<Id>1590861345424</Id>
+			<Name><![CDATA[AsyncLogger]]></Name>
+			<Text><![CDATA[import java.util.concurrent.*;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.stream.Collectors;
+import java.io.PrintWriter;
+import java.io.FileWriter;
+import java.nio.file.Path;
+import lombok.*;
+
+/**
+ * Logs outputs to file in an asynchronous way so the model can keep running fast.
+ */	
+@ToString(of = {"headerRow"})
+public class AsyncLogger implements AutoCloseable {
+
+	private final ExecutorService thread = Executors.newSingleThreadExecutor();
+	private final AtomicInteger eventId = new AtomicInteger(0);
+	private final PrintWriter out;
+	private final int numColumns;
+	private final String headerRow;
+	
+	/**
+	 * Create the logger.
+	 * @param outFile
+	 * @param columns
+	 */
+	public AsyncLogger(@NonNull Path outFile, @NonNull String... columns) {
+
+		// Sanity check -- need columns.
+		if (columns.length == 0) {
+			throw new IllegalArgumentException("Need at least one column.");
+		}
+		
+		// Create the writer.
+		try {
+			traceln("Will log to %s", outFile);
+			out = new PrintWriter(new FileWriter(outFile.toFile()), true);
+			headerRow = Arrays.asList(columns).stream().collect(Collectors.joining(","));
+			out.println("eventId,"+headerRow);
+			numColumns = columns.length;
+		}
+		catch (Throwable t) {
+			throw new Error(t);
+		}
+	}
+	
+	public void log(@NonNull Object... columns) {
+		// Sanity check: column size must match.
+		if (columns.length != numColumns) {
+			throw new IllegalArgumentException(String.format(
+					"Wrong number of columns. Got %s, needed %s (%s)",
+					columns.length,
+					numColumns,
+					headerRow
+			));
+		}
+		
+		// Submit.
+		long id = eventId.getAndIncrement();
+		thread.submit(() -> {
+			// Build the string.
+			StringBuilder sb = new StringBuilder();
+			sb.append(id).append(",");
+			for (int i = 0; i < columns.length; i += 1) {
+				sb.append("\"").append(""+columns[i]).append("\"");
+				if (i != columns.length - 1) {
+					sb.append(",");
+				}
+			}
+			out.println(sb.toString());
+		});
+	}
+	
+	public void flush() {
+		thread.submit(out::flush);
+	}
+	
+	@Override
+	public void close() throws Exception {
+		flush();
+		thread.shutdown();
+	}
+}]]></Text>
+		</JavaClass>
+	</JavaClasses>
+	<Libraries>
+		<!--   =========   Library   ========  -->
+		<Library>
+			<Id>1590598337615</Id>
+			<Name><![CDATA[al-utilities]]></Name>
+			<Description><![CDATA[Luminesim's AnyLogic utilities.]]></Description>
+
+			<VersionMajor>1</VersionMajor>
+			<VersionMinor>1</VersionMinor>
+			<VersionBuild>1</VersionBuild>
+			<Provider><![CDATA[]]></Provider>    
+		</Library>
+	</Libraries>
+	<ModelResources>
+		<Resource>
+			<Path><![CDATA[lombok-1.18.10.jar]]></Path>
+			<ReferencedFromUserCode>false</ReferencedFromUserCode>
+		</Resource>
+	</ModelResources>
+	<ClassPathEntry>
+		<ResourceReference>
+			<PackageName><![CDATA[com.luminesim.anylogic]]></PackageName>
+			<ClassName><![CDATA[lombok-1.18.10.jar]]></ClassName>
+		</ResourceReference>
+		<Imported>true</Imported>
+		<Folder>false</Folder>
+	</ClassPathEntry>
+</Model>
+</AnyLogicWorkspace>

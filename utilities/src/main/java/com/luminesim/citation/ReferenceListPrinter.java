@@ -19,8 +19,11 @@ public class ReferenceListPrinter {
      * A simple printout to console.
      */
     public void print() {
-        String header = "Label|Authority|Title|URL|Note|Value";
-        String tableMarker = "---|---|---|---|---|---|---|---";
+
+        // Note: Columns must match table marker EXACTLY for this to work out of the box
+        // with GitHub.
+        String header = "Label|Note|Value|Authority|Title|URL";
+        String tableMarker = "---|---|---|---|---|---";
         String format = "%s|%s|%s|%s|%s|%s";
         System.out.println("# Initial Parameters");
 
@@ -36,11 +39,11 @@ public class ReferenceListPrinter {
                         System.out.println(String.format(
                                 format,
                                 sanitize(ref.getLabel()),
+                                sanitize(ref.getData().getNote()),
+                                sanitize(value),
                                 sanitize(ref.getData().getAuthority()),
                                 sanitize(ref.getData().getTitle()),
-                                sanitize(ref.getData().getURL()),
-                                sanitize(ref.getData().getNote()),
-                                sanitize(value)//,
+                                sanitize(ref.getData().getURL())//,
                                 //sanitize((ref.getData().getOriginalDate() != null ? date(ref.getData().getOriginalDate()) : null)),
                                 //sanitize((ref.getData().getAccessed() != null ? date(ref.getData().getAccessed()) : null))
                                 )
