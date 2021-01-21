@@ -3,6 +3,8 @@ package com.luminesim.citation;
 import de.undercouch.citeproc.csl.CSLDate;
 import lombok.AllArgsConstructor;
 
+import java.io.PrintStream;
+import java.io.PrintWriter;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
@@ -19,21 +21,28 @@ public class ReferenceListPrinter {
      * A simple printout to console.
      */
     public void print() {
+        print(System.out);
+    }
+
+    /**
+     * A simple printout to console.
+     */
+    public void print(PrintStream out) {
         String header = "Label|Authority|Title|URL|Note|Value";
-        String tableMarker = "---|---|---|---|---|---|---|---";
+        String tableMarker = "---|---|---|---|---|---";
         String format = "%s|%s|%s|%s|%s|%s";
-        System.out.println("# Initial Parameters");
+        out.println("# Initial Parameters");
 
         LocalDate date = LocalDate.now();
         String text = date.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.MEDIUM));
-        System.out.println();
-        System.out.println("*Last updated: " + text + "*");
-        System.out.println();
-        System.out.println(header);
-        System.out.println(tableMarker);
+        out.println();
+        out.println("*Last updated: " + text + "*");
+        out.println();
+        out.println(header);
+        out.println(tableMarker);
         list.forEach(ref -> ref.getValue().forEachRevision((i, value) -> {
                     if (i == 0) {
-                        System.out.println(String.format(
+                        out.println(String.format(
                                 format,
                                 sanitize(ref.getLabel()),
                                 sanitize(ref.getData().getAuthority()),
