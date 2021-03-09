@@ -28,7 +28,7 @@ public class ReferenceListPrinter {
      * A simple printout to console.
      */
     public void print(PrintStream out) {
-        String header = "Label|Authority|Title|URL|Note|Value";
+        String header = "Label|Value|Note|Authority|Title|URL";
         String tableMarker = "---|---|---|---|---|---";
         String format = "%s|%s|%s|%s|%s|%s";
         out.println("# Initial Parameters");
@@ -45,13 +45,11 @@ public class ReferenceListPrinter {
                         out.println(String.format(
                                 format,
                                 sanitize(ref.getLabel()),
+                                sanitize(value),
+                                sanitize(ref.getData().getNote()),
                                 sanitize(ref.getData().getAuthority()),
                                 sanitize(ref.getData().getTitle()),
-                                sanitize(ref.getData().getURL()),
-                                sanitize(ref.getData().getNote()),
-                                sanitize(value)//,
-                                //sanitize((ref.getData().getOriginalDate() != null ? date(ref.getData().getOriginalDate()) : null)),
-                                //sanitize((ref.getData().getAccessed() != null ? date(ref.getData().getAccessed()) : null))
+                                sanitize(ref.getData().getURL())
                                 )
                         );
                     }
