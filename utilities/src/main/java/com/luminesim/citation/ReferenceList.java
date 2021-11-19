@@ -11,6 +11,8 @@ import lombok.extern.slf4j.Slf4j;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
@@ -270,6 +272,23 @@ public class ReferenceList {
         public Citation author(@NonNull String given, @NonNull String family) {
             builder.author(given, family);
             return this;
+        }
+
+        /**
+         * Adds a list of authors. Input must be given, last, given, last, given, last... format.
+         * @pre firstLasts has an even number of arguments and at least two
+         * @param firstLasts
+         * @return
+         */
+        public Citation authors(String... firstLasts) {
+            if (firstLasts.length % 2 != 0 || firstLasts.length == 0) {
+                throw new IllegalArgumentException("Name list needs to have an even number of names to make given-last pairs.");
+            }
+            List<CSLName> names = new LinkedList<>();
+            for (int i = 0; i < firstLasts.length; i += 2) {
+                names.add(new CSLNameBuilder().given(firstLasts[i]).family(firstLasts[i+1]).build());
+            }
+            return this.author(names.toArray(new CSLName[]{}));
         }
 
         public Citation author(@NonNull CSLName... people) {

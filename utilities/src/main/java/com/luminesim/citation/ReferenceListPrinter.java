@@ -5,9 +5,14 @@ import lombok.AllArgsConstructor;
 
 import java.io.PrintStream;
 import java.io.PrintWriter;
+import java.lang.reflect.Array;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * Prints a {@link ReferenceList}
@@ -24,10 +29,7 @@ public class ReferenceListPrinter {
         print(System.out);
     }
 
-    /**
-     * A simple printout to console.
-     */
-    public void print(PrintStream out) {
+    public void print(PrintWriter out) {
         String header = "Label|Value|Note|Authority|Title|URL";
         String tableMarker = "---|---|---|---|---|---";
         String format = "%s|%s|%s|%s|%s|%s";
@@ -40,21 +42,37 @@ public class ReferenceListPrinter {
         out.println();
         out.println(header);
         out.println(tableMarker);
+
         list.forEach(ref -> ref.getValue().forEachRevision((i, value) -> {
-                    if (i == 0) {
-                        out.println(String.format(
-                                format,
-                                sanitize(ref.getLabel()),
-                                sanitize(value),
-                                sanitize(ref.getData().getNote()),
-                                sanitize(ref.getData().getAuthority()),
-                                sanitize(ref.getData().getTitle()),
-                                sanitize(ref.getData().getURL())
-                                )
-                        );
-                    }
+            if (i == 0) {
+                // Author & authority a bit hard to deal with, so do it here.
+                List<String> authority = new LinkedList<>();
+                if (ref.getData().getAuthority() != null) {
+                    authority.add(ref.getData().getAuthority());
                 }
-        ));
+                if (ref.getData().getAuthor() != null) {
+                    Arrays.stream(ref.getData().getAuthor())
+                            .forEach(author -> authority.add(author.getGiven() + " " + author.getFamily()));
+                }
+
+                out.println(String.format(
+                        format,
+                        sanitize(ref.getLabel()),
+                        sanitize(value),
+                        sanitize(ref.getData().getNote()),
+                        sanitize(authority.stream().collect(Collectors.joining(", "))),
+                        sanitize(ref.getData().getTitle()),
+                        sanitize(ref.getData().getURL())
+                ));
+            }
+        }));
+    }
+
+    /**
+     * A simple printout to console.
+     */
+    public void print(PrintStream out) {
+        this.print(new PrintWriter(out));
     }
 
     /**
@@ -67,7 +85,11 @@ public class ReferenceListPrinter {
         if (raw == null) {
             return "";
         } else {
-            return raw.toString()
+            String out = raw.toString();
+            if (raw.getClass().isArray()) {
+                out = Arrays.asList(raw).toString();
+            }
+            return out
                     .replace("|", "\\|")
                     .replace("\r\n", "; ")
                     .replace("\n", "; ");
