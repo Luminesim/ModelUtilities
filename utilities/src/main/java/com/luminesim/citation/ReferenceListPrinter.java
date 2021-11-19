@@ -66,6 +66,7 @@ public class ReferenceListPrinter {
                 ));
             }
         }));
+        out.flush();
     }
 
     /**
